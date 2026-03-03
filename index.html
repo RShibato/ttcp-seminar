@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TTCP オンライン説明会｜academist</title>
+<meta name="description" content="東京都発・技術シーズを活用した起業チャレンジを支援するアクセラレーションプログラム「TTCP」のオンライン説明会申し込みページです。">
+<meta property="og:title" content="TTCP オンライン説明会｜academist">
+<meta property="og:description" content="東京都発ディープテックスタートアップ支援プログラム「TTCP」の説明会にご参加ください。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="ogp.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1B6B4A;
+    --primary-light: #E8F5EE;
+    --primary-dark: #134E35;
+    --accent: #F5A623;
+    --accent-light: #FFF4E0;
+    --text: #2C3E40;
+    --text-light: #5A6B6E;
+    --text-muted: #8A9A9D;
+    --bg: #FAFBF9;
+    --white: #FFFFFF;
+    --border: #E2E8E4;
+    --card-shadow: 0 2px 16px rgba(27, 107, 74, 0.06);
+    --radius: 12px;
+    --radius-lg: 20px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans JP', 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Announcement Bar ── */
+  .announcement {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+  .announcement a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* ── Header ── */
+  .header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.95);
+  }
+  .header-logos {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .logo-ttcp {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text);
+    letter-spacing: -0.02em;
+  }
+  .logo-ttcp span {
+    color: var(--primary);
+  }
+  .logo-divider {
+    width: 1px;
+    height: 24px;
+    background: var(--border);
+  }
+  .logo-academist {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--text-light);
+    letter-spacing: 0.04em;
+  }
+  .header-badge {
+    font-size: 12px;
+    color: var(--text-muted);
+    background: var(--primary-light);
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-weight: 500;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    background: #F5F3EE;
+    text-align: center;
+    padding: 0;
+  }
+  .hero-image-link {
+    display: block;
+    max-width: 960px;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  .hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ── Content ── */
+  .content {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ── Section ── */
+  .section {
+    padding: 56px 0;
+  }
+  .section + .section {
+    border-top: 1px solid var(--border);
+  }
+  .section-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 12px;
+  }
+  .section h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .section p {
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 1.9;
+  }
+  .section p + p {
+    margin-top: 12px;
+  }
+
+  /* ── About Card ── */
+  .about-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    border: 1px solid var(--border);
+    box-shadow: var(--card-shadow);
+  }
+  .about-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .about-card h3 .icon {
+    width: 32px;
+    height: 32px;
+    background: var(--primary-light);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+  .about-points {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .about-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+    background: var(--bg);
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+  .about-point:hover {
+    border-color: var(--border);
+  }
+  .about-point .num {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .about-point .text {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .about-point .text strong {
+    font-weight: 600;
+  }
+
+  /* ── Schedule Cards ── */
+  .schedule-grid {
+    display: grid;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .schedule-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.2s ease;
+    box-shadow: var(--card-shadow);
+  }
+  .schedule-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 4px 24px rgba(27,107,74,0.1);
+  }
+  .schedule-num {
+    flex-shrink: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--primary);
+    background: var(--primary-light);
+    padding: 4px 10px;
+    border-radius: 6px;
+    letter-spacing: 0.06em;
+  }
+  .schedule-info {
+    flex: 1;
+  }
+  .schedule-date {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+  .schedule-time {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .schedule-badge {
+    flex-shrink: 0;
+    font-size: 12px;
+    color: var(--text-muted);
+    background: var(--bg);
+    padding: 4px 12px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .schedule-badge svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .schedule-note {
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+    padding-left: 4px;
+    line-height: 1.8;
+  }
+
+  /* ── Target ── */
+  .target-list {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .target-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: var(--text);
+    background: var(--white);
+    padding: 8px 16px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+  }
+  .target-tag .check {
+    color: var(--primary);
+    font-size: 16px;
+  }
+
+  /* ── Details Grid ── */
+  .details-grid {
+    margin-top: 24px;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+  }
+  .detail-row {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+  }
+  .detail-row:last-child {
+    border-bottom: none;
+  }
+  .detail-label {
+    flex-shrink: 0;
+    width: 140px;
+    padding: 16px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary);
+    background: var(--primary-light);
+    display: flex;
+    align-items: center;
+  }
+  .detail-value {
+    flex: 1;
+    padding: 16px 20px;
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* ── Timeline ── */
+  .timeline {
+    margin-top: 28px;
+    padding-left: 4px;
+  }
+  .timeline-item {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    padding-bottom: 32px;
+  }
+  .timeline-item:last-child {
+    padding-bottom: 0;
+  }
+  .timeline-item:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 28px;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+  }
+  .timeline-marker {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    background: var(--white);
+    margin-top: 2px;
+    position: relative;
+    z-index: 1;
+  }
+  .timeline-marker.active {
+    border-color: var(--primary);
+    background: var(--primary);
+    box-shadow: 0 0 0 4px rgba(27,107,74,0.15);
+  }
+  .timeline-marker.active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: var(--white);
+    border-radius: 50%;
+  }
+  .timeline-content {
+    flex: 1;
+    padding-top: 0;
+  }
+  .timeline-date {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 4px;
+    letter-spacing: 0.02em;
+  }
+  .timeline-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+    line-height: 1.4;
+  }
+  .timeline-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ── FAQ ── */
+  .faq-list {
+    margin-top: 24px;
+    display: grid;
+    gap: 12px;
+  }
+  .faq-item {
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+  }
+  .faq-item[open] {
+    border-color: var(--primary);
+    box-shadow: var(--card-shadow);
+  }
+  .faq-question {
+    padding: 18px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    transition: background 0.2s ease;
+  }
+  .faq-question:hover {
+    background: var(--bg);
+  }
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+  .faq-question::after {
+    content: '+';
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-muted);
+    background: var(--bg);
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .faq-item[open] .faq-question::after {
+    content: '−';
+    background: var(--primary-light);
+    color: var(--primary);
+  }
+  .faq-answer {
+    padding: 0 24px 20px;
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.9;
+  }
+
+  /* ── Form Section ── */
+  .form-section {
+    padding: 64px 0;
+  }
+  .form-wrapper {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 48px 40px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 32px rgba(27,107,74,0.08);
+  }
+  .form-wrapper h2 {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .form-wrapper .form-sub {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+  .form-dates {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+  .form-date-item {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--primary);
+    background: var(--primary-light);
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(27,107,74,0.12);
+  }
+  /* HubSpot placeholder */
+  .hubspot-placeholder {
+    background: var(--bg);
+    border: 2px dashed var(--border);
+    border-radius: var(--radius);
+    padding: 48px 24px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .hubspot-placeholder code {
+    display: block;
+    margin-top: 12px;
+    background: var(--white);
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    color: var(--text-light);
+    border: 1px solid var(--border);
+    text-align: left;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    border-top: 1px solid var(--border);
+    padding: 40px 32px;
+    text-align: center;
+  }
+  .footer-org {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .footer-org-item {
+    font-size: 13px;
+    color: var(--text-light);
+  }
+  .footer-org-item strong {
+    display: block;
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .footer-links a {
+    font-size: 13px;
+    color: var(--primary);
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .footer-links a:hover {
+    opacity: 0.7;
+  }
+  .footer-copy {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .header {
+      padding: 12px 16px;
+    }
+    .header-badge {
+      display: none;
+    }
+    .hero {
+      padding: 56px 20px 48px;
+    }
+    .content {
+      padding: 0 16px;
+    }
+    .section {
+      padding: 40px 0;
+    }
+    .about-card {
+      padding: 24px 20px;
+    }
+    .schedule-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 20px;
+    }
+    .form-wrapper {
+      padding: 32px 20px;
+    }
+    .detail-row {
+      flex-direction: column;
+    }
+    .detail-label {
+      width: 100%;
+      padding: 10px 16px;
+    }
+    .detail-value {
+      padding: 12px 16px;
+    }
+    .faq-question {
+      padding: 16px 18px;
+      font-size: 14px;
+    }
+    .faq-answer {
+      padding: 0 18px 16px;
+    }
+    .footer-org {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="announcement">
+  📢 TTCP 2026年度の募集がスタートしました ─ 
+  <a href="https://iiinext.com/" target="_blank" rel="noopener">公式サイトで詳細を見る →</a>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-logos">
+    <div class="logo-ttcp"><span>TTCP</span></div>
+    <div class="logo-divider"></div>
+    <div class="logo-academist">academist</div>
+  </div>
+  <div class="header-badge">説明会運営</div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <a href="#apply" class="hero-image-link">
+    <img src="ogp.png" alt="GAPファンド付きアクセラレーションプログラム 東京都で起業したい研究者募集！ オンライン説明会 ① 3/17 Tue 12:00-12:30 ② 4/01 Wed 17:30-18:00 ③ 4/13 Mon 12:00-12:30" class="hero-image">
+  </a>
+</section>
+
+<!-- Main Content -->
+<div class="content">
+
+  <!-- About TTCP -->
+  <section class="section">
+    <div class="section-label">About</div>
+    <h2>Tokyo Technology Commercialization Program（TTCP）とは？</h2>
+    <p>
+      TTCPは、東京都内の大学・研究機関・企業等の技術シーズを活用し、起業にチャレンジする<strong>創業前のチーム</strong>および<strong>シード・アーリー期のディープテックスタートアップ（DTSU）</strong>を対象とした、GAPファンド付きアクセラレーションプログラムです。
+    </p>
+
+    <div class="about-card" style="margin-top: 28px;">
+      <h3>
+        <span class="icon">🎯</span>
+        応募メリット
+      </h3>
+      <div class="about-points">
+        <div class="about-point">
+          <span class="num">1</span>
+          <span class="text"><strong>GAPファンド 最大200万円</strong></span>
+        </div>
+        <div class="about-point">
+          <span class="num">2</span>
+          <span class="text"><strong>メンター制度</strong></span>
+        </div>
+        <div class="about-point">
+          <span class="num">3</span>
+          <span class="text"><strong>事業計画作成支援・外部資金獲得支援</strong> 等</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recruitment Details -->
+  <section class="section">
+    <div class="section-label">Details</div>
+    <h2>募集詳細</h2>
+    <div class="details-grid">
+      <div class="detail-row">
+        <div class="detail-label">募集対象者</div>
+        <div class="detail-value">
+          <div style="font-size: 13px; color: var(--primary); font-weight: 600; margin-bottom: 8px;">審査は人物評価を重視。実績の有無に関わらず、ぜひチャレンジを！</div>
+          <strong>起業前の個人またはチームの皆様へ</strong><br>
+          これから起業する準備を行っている個人およびチームを支援いたします。審査の際には、主に個人・チームの人物評価と事業趣旨に合致している「技術」を有しているか、社会的インパクトが高いかについて重きを置いて評価いたします。<br><br>
+          <strong>既に起業されているスタートアップの皆様へ</strong><br>
+          既に起業されており、今後政府のGrantやVCからの出資、事業会社との連携などを予定されているシード・アーリー期のスタートアップの皆様も対象といたします（既に出資やGrant獲得されているスタートアップでも構いません）。
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label">対象分野</div>
+        <div class="detail-value">ディープテック全般（ライフサイエンス、マテリアル、エネルギー、宇宙、ロボティクス、AI 等）</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label">採択予定数</div>
+        <div class="detail-value">10〜15チーム</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label">支援内容</div>
+        <div class="detail-value">GAPファンド、メンタリング、集合研修・講座、ピッチコンテスト、政府グラント・VC・事業会社とのマッチング支援等</div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label">募集期間</div>
+        <div class="detail-value"><strong>2026年2月27日 〜 2026年5月10日</strong></div>
+      </div>
+      <div class="detail-row">
+        <div class="detail-label">費用</div>
+        <div class="detail-value">無料</div>
+      </div>
+    </div>
+
+    <p style="margin-top: 16px;">
+      <a href="https://iiinext.com/program.html" target="_blank" rel="noopener" style="color: var(--primary); font-size: 14px; font-weight: 500;">募集要項の詳細はTTCP公式サイトへ →</a>
+    </p>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section">
+    <div class="section-label">Schedule</div>
+    <h2>全体スケジュール</h2>
+    <p>募集から採択、プログラム開始までの流れです。</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-marker active"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2026年2月27日</div>
+          <div class="timeline-title">募集開始・HP公開</div>
+          <div class="timeline-desc">公式サイトにて募集要項・応募フォームを公開</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2026年4月27日</div>
+          <div class="timeline-title">添削締切</div>
+          <div class="timeline-desc">この日までに提案書を提出された希望者全員に、事務局が添削サービスを提供します</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2026年4月30日</div>
+          <div class="timeline-title">フィードバック</div>
+          <div class="timeline-desc">事務局から提案書へのフィードバックを返却</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2026年5月10日</div>
+          <div class="timeline-title">応募締切</div>
+          <div class="timeline-desc">提案書の最終提出期限</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2026年5月23日</div>
+          <div class="timeline-title">結果発表</div>
+          <div class="timeline-desc">審査結果を通知</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2026年5月30日</div>
+          <div class="timeline-title">集合研修・プログラム開始</div>
+          <div class="timeline-desc">採択チームへの集合研修を実施し、プログラムがスタート</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2026年6月 〜 2028年3月</div>
+          <div class="timeline-title">各種研修・メンタリング期間</div>
+          <div class="timeline-desc">1on1/グループメンタリング、コンサルテーション、オンライン研修プログラム、中間ピッチコンテスト、GAPファンド提供等を継続的に実施</div>
+        </div>
+      </div>
+    </div>
+    <p class="schedule-note">※ スケジュールは変更になる場合があります。最新情報は<a href="https://iiinext.com/" target="_blank" rel="noopener" style="color: var(--primary);">TTCP公式サイト</a>をご確認ください。</p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="section-label">FAQ</div>
+    <h2>よくあるご質問</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-question">他のプログラムと並行して申請することは可能でしょうか。</summary>
+        <div class="faq-answer">他のプログラムと並行して申請していただいても結構です。他と並行してプログラムに参加される場合は、当該プログラムの内容を確認し、不足している部分について支援いたします。</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">どのようなスタートアップが対象になるのでしょうか。</summary>
+        <div class="faq-answer">創業前、創業後を問わず、次のステップに進みたい研究開発型スタートアップを対象にしています。創業前であれば、技術シーズは有しているけれどもCEO人材がおらず起業を迷っている。創業後であれば、顧客ニーズは掴めているものの資金調達に向けて核となる特許が取得できていない。といった具体的なお困りごとも、ご提案書提出時にわかるようにご記載ください。</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">ビジネスプランが無くても応募することが出来ますか。</summary>
+        <div class="faq-answer">申請書類には簡易なビジネスプランを記載していただく必要があります。ただし、詳細項目は任意としておりますので、現時点でお考えいただける範囲でご記載ください。</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Application Form -->
+  <section class="form-section" id="apply">
+    <div class="form-wrapper">
+      <h2>説明会に申し込む</h2>
+      <p class="form-sub">ご希望の日程を選択してお申し込みください。各回30分・同一内容・Zoom開催です。</p>
+
+      <div class="form-dates">
+        <span class="form-date-item">① 3/17（火）12:00〜12:30</span>
+        <span class="form-date-item">② 4/1（水）17:30〜18:00</span>
+        <span class="form-date-item">③ 4/13（月）12:00〜12:30</span>
+      </div>
+
+      <!-- HubSpot Form -->
+      <div id="hubspot-form">
+        <script charset="utf-8" type="text/javascript" src="//js-na2.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          hbspt.forms.create({
+            portalId: "23394420",
+            formId: "b9c49791-0277-46ca-819c-819b49cb479a",
+            region: "na2"
+          });
+        </script>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-org">
+    <div class="footer-org-item">
+      <strong>プログラム主催</strong>
+      東京都 ／ 株式会社日本総合研究所
+    </div>
+    <div class="footer-org-item">
+      <strong>説明会 企画運営</strong>
+      アカデミスト株式会社
+    </div>
+  </div>
+  <div class="footer-links">
+    <a href="https://iiinext.com/" target="_blank" rel="noopener">TTCP 公式サイト</a>
+    <a href="mailto:200010-tokyo-tcp@ml.jri.co.jp">お問い合わせ（TTCP事務局）</a>
+  </div>
+  <p class="footer-copy">© 2026 Tokyo Technology Commercialization Program</p>
+</footer>
+
+</body>
+</html>
